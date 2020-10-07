@@ -1,33 +1,39 @@
 #! /usr/bin/env node
 
-const {blueBright, bold, white,greenBright} = require("colorette");
-const boxen = require("boxen");
-const options = {
-    padding: 1,
-    margin: 0,
-    borderStyle: 'double'
-  }
+const { blueBright, bold, white, greenBright, redBright } = require("colorette")
+const boxen = require("boxen")
 
+const boxOptions = {
+  padding: 1,
+  margin: 0,
+  borderStyle: 'double'
+}
 
-const work = white(`   Community Lead @ ${blueBright('Trustworks')}`)
-const twitter = blueBright('https://twitter.com/i_am_the_dev')
-const linkedIn = blueBright('https://linkedin.com/in/nasirhm')
-const github = blueBright(' https://github.com/nasirhm')
-const npm = blueBright('     https://https://www.npmjs.com/~nasirhussain')
-const npx = white('   npx nasirhussain')
-const web = blueBright('     http://nasirhussain.me/')
-  
-const newLine = '\n'
-const heading = `${white(bold('                     Nasir Hussain '))}`
-const working = `${white(bold('     Work:'))}  ${work}`
-const linkedining = `${white(bold('     LinkedIn:'))} ${linkedIn}`
-const twittering = `${white(bold('     Twitter:'))}  ${twitter}`
-const githubing = `${white(bold('     GitHub:'))}  ${github}`
-const npming = `${white(bold('     NPM:'))} ${npm}`
-const webing = `${white(bold('     Web:'))} ${web}`
-const carding = `${white(bold('     Card:'))}  ${npx}`
+const work = white(`Senior Consultant @ ${bold('Wunder')}${bold(redBright('dog'))}`)
+const twitter = blueBright('https://twitter.com/koehr_in')
+const github = blueBright('https://github.com/nkoehring')
 
+const npm = blueBright('https://https://www.npmjs.com/~koehr')
+const npx = white('npx koehr')
+const www = blueBright('https://koehr.in')
+const blog = blueBright('https://koehr.tech')
 
-let output = `${newLine} ${newLine} ${heading} ${newLine} ${newLine} ${working} ${newLine} ${twittering} ${newLine} ${linkedining} ${newLine} ${githubing} ${newLine} ${npming} ${newLine} ${webing} ${newLine} ${newLine} ${carding} ${newLine} ${newLine}`;
-output =  greenBright(boxen(output,options));
-console.log(output);
+function withHeading(heading, text) {
+  const coloredHeading = white(bold(`     ${heading}:`))
+  return `${coloredHeading} ${text}`
+}
+
+const headline = `${white(bold('                    Norman Köhring '))}`
+
+const output = [
+  headline,
+  withHeading('   Work', work),
+  withHeading('Twitter', twitter),
+  withHeading(' Github', github),
+  withHeading('    NPM', npm),
+  withHeading('    WWW', www),
+  withHeading('   Blog', blog),
+  withHeading('   Card', npx),
+].join('\n')
+
+console.log(greenBright(boxen(output, boxOptions)))
