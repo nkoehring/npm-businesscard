@@ -1,11 +1,11 @@
 {
   "name": "koehr",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "A business card, inspired by npm-nasirhussain",
   "main": "./card.ts",
   "type": "module",
   "scripts": {
-    "build": "bun build card.ts --minify --target=node --outfile ./dist/card.js",
+    "build": "echo '#!/bin/env node' > ./dist/card.js && bun build card.ts --minify --target=node >> ./dist/card.js",
     "test": "node index.js"
   },
   "bin": {
@@ -15,10 +15,7 @@
     "type": "git",
     "url": "git+https://github.com/nkoehring/npm-businesscard.git"
   },
-  "keywords": [
-    "businesscard",
-    "koehr"
-  ],
+  "keywords": ["businesscard", "koehr"],
   "author": "koehr <n@koehr.in>",
   "license": "MIT",
   "bugs": {
