@@ -1,14 +1,15 @@
 {
   "name": "koehr",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "A business card, inspired by npm-nasirhussain",
-  "main": "index.js",
+  "main": "./card.ts",
   "type": "module",
   "scripts": {
+    "build": "bun build card.ts --minify --target=node --outfile ./dist/card.js",
     "test": "node index.js"
   },
   "bin": {
-    "koehr": "index.js"
+    "koehr": "dist/card.js"
   },
   "repository": {
     "type": "git",
@@ -27,5 +28,11 @@
   "dependencies": {
     "boxen": "^8.0.0",
     "colorette": "^2.0.0"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
   }
 }
