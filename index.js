@@ -14,7 +14,7 @@ const twitter = blueBright('https://twitter.com/koehr_in')
 const github = blueBright('https://github.com/nkoehring')
 const forge = blueBright('https://git.koehr.ing/')
 
-const npm = blueBright('https://https://www.npmjs.com/~koehr')
+const npm = blueBright('https://www.npmjs.com/~koehr')
 const npx = white('npx koehr')
 const www = blueBright('https://koehr.ing')
 
