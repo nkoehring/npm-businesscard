@@ -8,7 +8,7 @@
     "test": "node index.js"
   },
   "bin": {
-    "koehr": "./index.js"
+    "koehr": "index.js"
   },
   "repository": {
     "type": "git",
