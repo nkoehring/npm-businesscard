@@ -1,8 +1,9 @@
 {
   "name": "koehr",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "A business card, inspired by npm-nasirhussain",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "node index.js"
   },
@@ -24,7 +25,7 @@
   },
   "homepage": "https://github.com/nkoehring/npm-businesscard#readme",
   "dependencies": {
-    "boxen": "^4.2.0",
-    "colorette": "^1.2.1"
+    "boxen": "^8.0.0",
+    "colorette": "^2.0.0"
   }
 }
